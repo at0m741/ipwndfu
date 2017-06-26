@@ -5,7 +5,7 @@ import libusbfinder
 
 MAX_PACKET_SIZE = 0x4000
 
-def acquire_device(timeout=10):
+def acquire_device(timeout=50):
     backend = usb.backend.libusb1.get_backend(find_library=lambda x:libusbfinder.libusb1_path())
     #print 'Acquiring device handle',
     start = time.time()
